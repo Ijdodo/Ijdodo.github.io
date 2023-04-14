@@ -180,3 +180,34 @@ footer > h1 {
     color: #95A7FF;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    /* écrans jusqu'à 768px de largeur */
+    .nav-items {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-item {
+      margin: 10px 0;
+    }
+    img {
+      width: 100%;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /*  écrans jusqu'à 480px de largeur */
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  

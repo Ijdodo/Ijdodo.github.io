@@ -210,3 +210,49 @@ footer > h1 {
       font-size: 1rem;
     }
   }
+/* Pour les écrans d'une largeur maximale de 768px (taille des écrans de tablettes et smartphones) */
+@media only screen and (max-width: 768px) {
+    /* Ajouter un padding sur le corps de la page pour éviter que la navbar ne soit cachée par le haut de l'écran */
+    body {
+      padding-top: 60px;
+    }
+    
+    /* Fixer la position de la navbar en haut de l'écran */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+    
+    /* Ajouter un fond blanc semi-transparent à la navbar pour améliorer la lisibilité */
+    nav {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Ajuster les marges et les paddings pour que la navbar soit correctement positionnée et stylisée */
+    .nav-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 768px;
+    }
+    
+    .nav-item.logo {
+      margin-left: 0;
+    }
+    
+    .nav-item a {
+      font-size: 14px;
+      padding: 5px;
+    }
+    
+    .nav-item:last-child {
+      margin-right: 0;
+    }
+  }

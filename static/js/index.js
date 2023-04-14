@@ -19,6 +19,22 @@ function checkForm(e) {
         document.getElementById("success-message").style.display = "block";
         form.submit();
     }
+    
+}
+
+const form = document.getElementById("contact-form");
+const successMsg = document.getElementById("success-msg");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (validateForm()) {
+    successMsg.style.display = "block";
+  }
+});
+
+function validateForm() {
+  // Ajoutez ici votre code de validation de formulaire existant
+  // Assurez-vous de renvoyer true si le formulaire est valide et false sinon.
 }
 
 function displayErrorMessage(field, name) {
@@ -58,3 +74,4 @@ function validateEmail(email) {
         }
       });
       // Supprimer les cookie/vider le cache pour pouvoir faire disparaitre le message et pour réessayer
+      

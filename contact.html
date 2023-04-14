@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Wave</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="./static/images/blueicon.PNG">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+          <div class="nav-items">
+            <img src="./static/images/blueicon.PNG" alt="Logo de votre site" width="2.5%">
+            <div class="nav-item logo">Blue Wave</div>
+            <div class="nav-item">
+              
+              <a href="index.html">Accueil</a>
+            </div>
+            <div class="nav-item">
+              <a href="events.html">Événéments</a>
+            </div>
+    
+            <div class="nav-item">
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+        </nav>
+    
+      </header>
+
+
+    <main class="container d-flex justify-content-center flex-wrap" style="gap: 50px;">
+        <div class="form">
+            <h1>Contactez Nous</h1>
+            <form id="form">
+                <div class="input-block">
+                    <label class="input-label" for="firstName">Prénom</label>
+                    <input class="form-control" type="text" id="firstName" placeholder="Votre prénom">
+                </div>
+
+                <div class="input-block">
+                    <label class="input-label" for="lastName">Nom</label>
+                    <input class="form-control" type="text" id="lastName" placeholder="Nom">
+                </div>
+
+                <div class="input-block">
+                    <label class="input-label" for="email">E-mail</label>
+                    <input class="form-control" type="text" id="email" placeholder="Votre adresse e-mail">
+                </div>
+
+                <div class="input-block">
+                    <label class="input-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" cols="30" rows="10"
+                        placeholder="Votre message"></textarea>
+                </div>
+
+                <div class="input-block">
+                    <button class="form-button" type="submit">Envoyer</button>
+
+                </div>
+                <div id="error-message"></div>
+                <div id="error-message"></div>
+            <div id="success-message" style="display:none;">
+                <p>Votre message a été envoyé avec succès!</p>
+            </div>
+                <br /><br />
+                <br /><br /><br />
+            </form>
+        </div>
+        
+    </main>
+    <script>
+        document.getElementById("form").addEventListener("submit",)
+        </script>
+
+
+    <footer>
+        <div>Copyright Blue Wave 2023 © Tous droits réservés</div>
+    </footer>
+
+</body>
+
+<script src="static/js/index.js"></script>
+
+</html>

@@ -1,16 +1,17 @@
+/* Importation de la police Manrope à partir de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
-
+/* Couleur du background avec degrdé decouleur + marge*/
 body, html {
     margin: 0;
     padding: 0;
     background: radial-gradient(50% 50% at 50% 50%, rgba(18, 14, 240, 0.05) 0%, rgb(21, 55, 221) 100%), #030d42 !important;
 }
-
+/* Définition de la police de caractères pour tous les éléments de la page + la couleur du texte en blanc */
 * {
     font-family: 'Manrope', sans-serif;
     color: #fff;
 }
-
+/* code pour la barre de navigation en haut de la page avec positionnement fixe et couleur de fond */
 header {
     top: 0;
     left: 0;

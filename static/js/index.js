@@ -17,8 +17,7 @@ function checkForm(e) {
         displayErrorMessage(message, "message")
     } else {
         document.getElementById("success-message").style.display = "block";
-        form.submit();
-    }
+        localStorage.setItem("formSubmitted", "true");    }
     
 }
 
@@ -52,19 +51,8 @@ function validateEmail(email) {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
         );
     }
-    document.getElementById("form").addEventListener("submit", function(event) {
-        // Empêcher le comportement par défaut du formulaire
-        event.preventDefault();
-      
-        // Afficher le message de réussite
-        var successMessage = document.getElementById("success-message");
-        successMessage.style.display = "block";
-      
-        // Stocker une valeur dans le stockage local du navigateur pour pouvoir nous permettre de laisser le message de reussite afficher à la fin de l'envoie du formulaire
-        localStorage.setItem("formSubmitted", "true");
-      });
-
-      window.addEventListener("load", function() {
+    
+    window.addEventListener("load", function() {
         // Vérifier si le formulaire a été soumis avec succès
         var formSubmitted = localStorage.getItem("formSubmitted");
         if (formSubmitted === "true") {
@@ -73,5 +61,4 @@ function validateEmail(email) {
           successMessage.style.display = "block";
         }
       });
-      // Supprimer les cookie/vider le cache pour pouvoir faire disparaitre le message et pour réessayer
       

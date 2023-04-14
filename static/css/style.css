@@ -210,4 +210,22 @@ footer > h1 {
       font-size: 1rem;
     }
   }
-  
+  @media only screen and (max-width: 428px) {
+    /* Styles pour les écrans jusqu'à 428px de largeur */
+    .nav-items {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-item {
+      margin: 10px 0;
+    }
+    img {
+      width: 100%;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }

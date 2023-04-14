@@ -228,3 +228,109 @@ footer > h1 {
       margin-right: 0;
     }
   }
+
+  /* styles pour la barre de navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    z-index: 999;
+  }
+  
+  .nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 10px;
+  }
+  
+  /* styles pour le logo */
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  
+  /* styles pour les liens de navigation */
+  .nav-item a {
+    color: #444;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  
+  /* styles pour les liens de navigation sur écrans plus petits */
+  @media only screen and (max-width: 600px) {
+    .nav-items {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100vh;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+    }
+  
+    .nav-items.active {
+      transform: translateX(0);
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  
+    .nav-item a {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    .logo {
+      margin: 10px 0;
+    }
+  
+    .menu-icon {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      z-index: 999;
+    }
+  
+    .menu-icon .bar {
+      background-color: #444;
+      width: 100%;
+      height: 3px;
+      display: block;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .menu-icon.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-icon.active .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .menu-icon.active .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  

@@ -180,3 +180,18 @@ footer > h1 {
     color: #95A7FF;
     margin-top: 10px;
 }
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+@media screen and (max-width: 768px) {
+    /* styles à appliquer pour les écrans jusqu'à 768px de large */
+  }
+  
+  @media screen and (max-width: 576px) {
+    /* styles à appliquer pour les écrans jusqu'à 576px de large */
+  }
+  
